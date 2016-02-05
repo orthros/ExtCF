@@ -17,6 +17,11 @@ namespace ExtCF.ContractExtensions.Metadata
         public ContractExtensionMetadataAttribute(string functionName)
             : base(typeof(ContractExtension))
         {
+            if(string.IsNullOrWhiteSpace(functionName))
+            {
+                throw new ArgumentNullException("functionName");
+            }
+
             this.FunctionName = functionName;
         }
     }
