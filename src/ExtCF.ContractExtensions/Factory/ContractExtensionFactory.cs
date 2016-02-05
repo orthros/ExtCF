@@ -47,6 +47,11 @@ namespace ExtCF.ContractExtensions.Factory
 
         public ContractExtensionFactory(ILog log)
         {
+            if(log == null)
+            {
+                throw new ArgumentNullException("log");
+            }
+
             this.Logger = log;
             ComposeContainers();
         }
