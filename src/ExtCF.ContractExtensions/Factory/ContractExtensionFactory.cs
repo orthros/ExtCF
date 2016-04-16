@@ -49,7 +49,7 @@ namespace ExtCF.ContractExtensions.Factory
         {
             if(log == null)
             {
-                throw new ArgumentNullException("log");
+                throw new ArgumentNullException(nameof(log));
             }
 
             this.Logger = log;
@@ -81,7 +81,7 @@ namespace ExtCF.ContractExtensions.Factory
                 }
                 else
                 {
-                    Logger.Log(string.Format("No operation descriptions found for function name: {0}", extension.Metadata.FunctionName));
+                    Logger.Log($"No operation descriptions found for function name: {extension.Metadata.FunctionName}");
                 }
 
             }
@@ -102,11 +102,20 @@ namespace ExtCF.ContractExtensions.Factory
 
         private void LoadAssemblyExtensions(ref AggregateCatalog catalog)
         {
+            if(catalog == null)
+            {
+                throw new ArgumentNullException(nameof(catalog));
+            }
             catalog.Catalogs.Add(new AssemblyCatalog(typeof(ContractExtensionFactory).Assembly));
         }
 
         private void LoadDynamicExtensions(ref AggregateCatalog catalog)
         {
+            if(catalog == null)
+            {
+                throw new ArgumentNullException(nameof(catalog));
+            }
+
             DirectoryInfo newDin = new DirectoryInfo(Environment.CurrentDirectory);
             DirectoryCatalog dcat = new DirectoryCatalog(newDin.FullName);
             catalog.Catalogs.Add(dcat);

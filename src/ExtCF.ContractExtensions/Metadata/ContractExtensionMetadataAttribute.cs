@@ -19,7 +19,7 @@ namespace ExtCF.ContractExtensions.Metadata
         {
             if(string.IsNullOrWhiteSpace(functionName))
             {
-                throw new ArgumentNullException("functionName");
+                throw new ArgumentNullException(nameof(functionName));
             }
 
             this.FunctionName = functionName;
