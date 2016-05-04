@@ -1,6 +1,6 @@
 ﻿using ExtCF.ContractExtensions.Extension;
 using ExtCF.ContractExtensions.Metadata;
-using Orth.Core.Logs;
+using log4net;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.Composition;
@@ -12,6 +12,8 @@ namespace ExtCF.ContractExtensions.Factory
 {
     public class ContractExtensionFactory : IContractExtensionFactory
     {
+        public static readonly ILog Logger = LogManager.GetLogger(typeof(ContractExtensionFactory));
+
         [ImportMany]
         private IEnumerable<Lazy<ContractExtension, IContractExtensionMetadata>> _extensions;
         private IEnumerable<Lazy<ContractExtension, IContractExtensionMetadata>> Extensions
@@ -39,28 +41,10 @@ namespace ExtCF.ContractExtensions.Factory
             }
         }
 
-        private ILog Logger
-        {
-            get;
-            set;
-        }
-
-        public ContractExtensionFactory(ILog log)
-        {
-            if(log == null)
-            {
-                throw new ArgumentNullException(nameof(log));
-            }
-
-            this.Logger = log;
-            ComposeContainers();
-        }
-
         public ContractExtensionFactory()
-            : this(new ConsoleLogger())
-        {
-            Logger.Log("Finished constructing with a new ConsoleLogger");
-        }
+        {            
+            ComposeContainers();
+        }        
 
         public void ApplyContractExtensions(ServiceEndpoint endpoint)
         {
@@ -81,7 +65,7 @@ namespace ExtCF.ContractExtensions.Factory
                 }
                 else
                 {
-                    Logger.Log($"No operation descriptions found for function name: {extension.Metadata.FunctionName}");
+                    Logger.Warn($"No operation descriptions found for function name: {extension.Metadata.FunctionName}");
                 }
 
             }
