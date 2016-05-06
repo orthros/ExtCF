@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{5EBAAA69-7971-4E59-9EA0-C4992C317CC1}</ProjectGuid>
+    <ProjectGuid>{A44D26C4-AB87-4CA7-8D49-AB9AF2A9BCC0}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ExtCF.ContractExtensions</RootNamespace>
-    <AssemblyName>ExtCF.ContractExtensions</AssemblyName>
+    <RootNamespace>ExtCF.Hosting</RootNamespace>
+    <AssemblyName>ExtCF.Hosting</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -39,10 +39,9 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />
-    <Reference Include="System.ComponentModel.Composition" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceModel.Activation" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -51,17 +50,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Extension\ContractExtension.cs" />
-    <Compile Include="Factory\ContractExtensionFactory.cs" />
-    <Compile Include="Factory\IContractExtensionFactory.cs" />
-    <Compile Include="Metadata\ContractExtensionMetadataAttribute.cs" />
-    <Compile Include="Metadata\IContractExtensionMetadata.cs" />
+    <Compile Include="Factory\InjectServiceHostFactory.cs" />
+    <Compile Include="InjectInstanceProvider.cs" />
+    <Compile Include="InjectServiceHost.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="packages.config">
-      <SubType>Designer</SubType>
-    </None>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

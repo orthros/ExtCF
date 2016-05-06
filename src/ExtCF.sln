@@ -5,7 +5,7 @@ VisualStudioVersion = 14.0.24720.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExtCF.ContractExtensions", "ExtCF.ContractExtensions\ExtCF.ContractExtensions.csproj", "{5EBAAA69-7971-4E59-9EA0-C4992C317CC1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExtCF.Tests", "ExtCF.Tests\ExtCF.Tests.csproj", "{22670F54-55AD-4BDB-94EF-D14469327E38}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExtCF.Hosting", "ExtCF.Hosting\ExtCF.Hosting.csproj", "{A44D26C4-AB87-4CA7-8D49-AB9AF2A9BCC0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +17,10 @@ Global
 		{5EBAAA69-7971-4E59-9EA0-C4992C317CC1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5EBAAA69-7971-4E59-9EA0-C4992C317CC1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5EBAAA69-7971-4E59-9EA0-C4992C317CC1}.Release|Any CPU.Build.0 = Release|Any CPU
-		{22670F54-55AD-4BDB-94EF-D14469327E38}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{22670F54-55AD-4BDB-94EF-D14469327E38}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{22670F54-55AD-4BDB-94EF-D14469327E38}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{22670F54-55AD-4BDB-94EF-D14469327E38}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A44D26C4-AB87-4CA7-8D49-AB9AF2A9BCC0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A44D26C4-AB87-4CA7-8D49-AB9AF2A9BCC0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A44D26C4-AB87-4CA7-8D49-AB9AF2A9BCC0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A44D26C4-AB87-4CA7-8D49-AB9AF2A9BCC0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
