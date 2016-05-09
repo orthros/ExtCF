@@ -35,7 +35,7 @@ namespace ExtCF.Hosting
 
         public void ApplyDispatchBehavior(ContractDescription contractDescription, ServiceEndpoint endpoint, DispatchRuntime dispatchRuntime)
         {
-            
+            dispatchRuntime.InstanceProvider = this;
         }
 
         public object GetInstance(InstanceContext instanceContext)

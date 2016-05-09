@@ -9,7 +9,7 @@
     <projectUrl>http://github.com/orthros/ExtCF</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>$description$</description>
-    <releaseNotes>Fixed bugs with the InjectServiceHost not being properly constructed</releaseNotes>
+    <releaseNotes>Fixed bug with the InjectInstanceProvider not properly setting itself as the InstanceProvider</releaseNotes>
     <copyright>Copyright 2016</copyright>
     <dependencies>
 	    <dependency id="orth.core" version="1.0.0" />
