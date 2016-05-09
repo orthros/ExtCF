@@ -18,6 +18,8 @@ namespace ExtCF.Hosting
                 throw new ArgumentNullException(nameof(constructor));
             }
 
+            this.ConstructorFunc = constructor;
+
             ApplyConstructor();
         }
 

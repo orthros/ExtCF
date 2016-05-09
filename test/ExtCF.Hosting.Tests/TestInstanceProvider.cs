@@ -22,6 +22,6 @@ namespace ExtCF.Hosting.Tests
 
             var testVal = provider.GetInstance(null);
             Assert.IsType(typeof(StubHost), testVal);            
-        }
+        }        
     }
 }
