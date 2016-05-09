@@ -6,9 +6,9 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("ExtCF.ContractExtensions")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("A set of tools to extend a WCF Service with Contract with new DataContractResolvers and the MEF")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
+[assembly: AssemblyCompany("orthros")]
 [assembly: AssemblyProduct("ExtCF.ContractExtensions")]
 [assembly: AssemblyCopyright("Copyright ©  2016")]
 [assembly: AssemblyTrademark("")]
